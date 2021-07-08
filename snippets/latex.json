@@ -12,13 +12,14 @@
 	"Tikz Figure":{
 		"prefix": "tikz",
 		"description": "Create tikz environment",
-		"body": ["\\begin{figure}[h]\\label{fig:$5}\\centering",
+		"body": ["\\begin{figure}[h]\\centering",
 		// "\\tikzstyle{block} = [draw, minimum width = 2cm, minimum height = 1.2cm, fill=blue!5]",
 		"\\begin{tikzpicture}",
 			"\t\\begin{axis}[xlabel = ${1:\\(x \\)}, ylabel = ${2:\\(f(x)\\)}, title = $3]",
 				"\t\t${0}",
 			"\t\\end{axis}",
 		"\\end{tikzpicture}",
+		"\\label{fig:$5}",
 		"\\caption{$4}",
 		"\\end{figure}"],
 	},
@@ -66,11 +67,11 @@
 		"description": "Figure and image dimensions",
 		"prefix": "mat",
 		"body": [
-			"\\begin{figure}[${1|h,t,b,p|}]\\label{fig:$6}",
+			"\\begin{figure}[${1|h,t,b,p|}]",
 			"\\centering",
 				"\t\\texdim{${2:5}cm}{${3:8}cm}",
 				"\t\\input{$4}",
-			"\\caption{$5}",
+			"\\label{fig:$6}\n\\caption{$5}",
 			"\\end{figure}$0",
 		],
 	},
@@ -103,12 +104,12 @@
 		"description": "Create a table and tabular",
 		"prefix": "@tb",
 		"body": [
-			"\\begin{table}[h]\\label{tb:$2}",
+			"\\begin{table}[h]",
 			"\\centering",
 			"\\begin{tabular}{${3|c,l,r,p,m,b|}}",
-			"\t$0",
+				"\t$0",
 			"\\end{tabular}",
-				"\t\\caption{$1}",
+			"\\label{tb:$2}\n\\caption{$1}",
 			"\\end{table}"
 		]
 	},
@@ -126,10 +127,10 @@
 		"description": "Figure with includegraphics",
 		"prefix": "fig",
 		"body": [
-			"\\begin{figure}[${1|h,t,b,p|}]\\label{fig:$4}",
+			"\\begin{figure}[${1|h,t,b,p|}]",
 			"\\centering",
 				"\t\\includegraphics[${3|width=\\textwidth,scale=1|}]{$2}",
-			"\\caption{$5}",
+			"\\label{fig:$4}\n\\caption{$5}",
 			"\\end{figure}$0",
 		]
 	},
