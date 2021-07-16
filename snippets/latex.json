@@ -95,14 +95,9 @@
 		"prefix": "@/",
 		"body": "\\frac{${1:$TM_SELECTED_TEXT}}{$2}$0"
 	},
-	"Square root":{
-		"prefix": "@sr",
-		"description": "Square root",
-		"body": "\\sqrt{${1:$TM_SELECTED_TEXT}}$2",
-	},
 	"Create table": {
 		"description": "Create a table and tabular",
-		"prefix": "@tb",
+		"prefix": "tb",
 		"body": [
 			"\\begin{table}[h]",
 			"\\centering",
@@ -146,7 +141,7 @@
 			"\\begin{minipage}{${1:0.45\\textwidth}}\n\t$2",
 			"\\end{minipage}\n\\hfill",
 			"\\begin{minipage}{$1}\n\t$3",
-			"\\end{minipage}\n$0",
+			"\\end{minipage}$0",
 		]
 	}
 	// "Figure tikz":{
