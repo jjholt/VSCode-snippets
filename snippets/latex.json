@@ -71,14 +71,14 @@
 			"\\centering",
 				"\t\\texdim{${2:5}cm}{${3:8}cm}",
 				"\t\\input{$4}",
-			"\\label{fig:$6}\n\\caption{$5}",
+			"\\caption{fig:$6}\n\\label{$5}",
 			"\\end{figure}$0",
 		],
 	},
 	"Section + Subimport":{
 		"description": "Add section and subimport",
 		"prefix": "simp",
-		"body": "\\section{$1}\n\t\\subimport{${2:files/}}{$3}$0",
+		"body": "\\section{$1}\n\t\\subimport{${2:src/}}{$3}$0",
 	},
 	"Vec": {
 		"description": "Vector",
@@ -104,7 +104,7 @@
 			"\\begin{tabular}{${3|c,l,r,p,m,b|}}",
 				"\t$0",
 			"\\end{tabular}",
-			"\\label{tb:$2}\n\\caption{$1}",
+			"\\caption{tb:$2}\n\\label{$1}",
 			"\\end{table}"
 		]
 	},
@@ -125,7 +125,7 @@
 			"\\begin{figure}[${1|h,t,b,p|}]",
 			"\\centering",
 				"\t\\includegraphics[${3|width=\\textwidth,scale=1|}]{$2}",
-			"\\label{fig:$4}\n\\caption{$5}",
+			"\\caption{$5}\n\\label{fig:$4}",
 			"\\end{figure}$0",
 		]
 	},
